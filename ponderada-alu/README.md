@@ -42,7 +42,7 @@ A parte mais complexa foi o multiplicador, que implementei usando o método Shif
 
 , O Registrador MQ que armazena o multiplicador e desloca seus bits para a direita a cada clock, com cada estágio composto por um MUX 4:1 e um flip,flop D.
 ![Registrador MQ](img/registradorMQ.png)
-![Flip,flop D](img/flip,flopD.png)
+![Flip,flop D](img/flip-flopD.png)
 
 , O Registrador AC que é responsável por acumular as somas parciais e tem uma estrutura parecida com a do MQ, mas com a diferença de que sua entrada de carga vem de um MUX de decisão , que escolhe entre manter o valor atual ou carregar o resultado da soma AC + A, dependendo do valor do bit MQ0.
 ![Registrador AC](img/registradorAC.png)
