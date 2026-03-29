@@ -7,7 +7,7 @@ Uma ALU é a parte de um processador responsável por realizar operações lógi
 ## Como foi feito
 
 ### Portas Lógicas
-O ponto de partida de todo o projeto foi a porta NAND. A partir dela derivei todas as outras portas lógicas — NOT, AND, OR e XOR, já que a partir da NAND conseguimos fazer qualquer outra porta. As versões de 8 bits dessas portas basicamente são 8 portas de 1 bit operando em paralelo, fazendo a operação bit a bit.
+O ponto de partida de todo o projeto foi a porta NAND. A partir dela derivei todas as outras portas lógicas, NOT, AND, OR e XOR, já que a partir da NAND conseguimos fazer qualquer outra porta. As versões de 8 bits dessas portas basicamente são 8 portas de 1 bit operando em paralelo, fazendo a operação bit a bit.
 
 ![NAND 8 bits](img/NAND8bits.png)
 ![XOR 8 bits](img/XOR8bits.png)
@@ -27,7 +27,7 @@ O subtrator segue a mesma lógica, mas invertendo a entrada B e o Cin antes de e
 ![Subtrator 8 bits](img/subtrator8bits.png)
 
 ### Shift Lógico
-O shift lógico não utiliza portas lógicas — ele é feito só com fiação, conectando cada bit uma posição acima ou abaixo dependendo da direção do deslocamento.
+O shift lógico não utiliza portas lógicas, ele é feito só com fiação, conectando cada bit uma posição acima ou abaixo dependendo da direção do deslocamento.
 
 ![Shift Direita](img/shiftdireita.png)
 ![Shift Esquerda](img/shiftesquerda.png)
@@ -44,7 +44,7 @@ A parte mais complexa foi o multiplicador, que implementei usando o método Shif
 ![Registrador MQ](img/registradorMQ.png)
 ![Flip,flop D](img/flip,flopD.png)
 
-, O Registrador AC que é responsável por acumular as somas parciais e tem uma estrutura parecida com a do MQ, mas com a diferença de que sua entrada de carga vem de um MUX de decisão — que escolhe entre manter o valor atual ou carregar o resultado da soma AC + A, dependendo do valor do bit MQ0.
+, O Registrador AC que é responsável por acumular as somas parciais e tem uma estrutura parecida com a do MQ, mas com a diferença de que sua entrada de carga vem de um MUX de decisão , que escolhe entre manter o valor atual ou carregar o resultado da soma AC + A, dependendo do valor do bit MQ0.
 ![Registrador AC](img/registradorAC.png)
 
 , O somador de 8 bits que calcula AC + A constantemente, e o MQ0 decide a cada ciclo se esse valor será carregado no AC ou não.
